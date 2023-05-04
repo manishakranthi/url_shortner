@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title_block %}
+
+        {% endblock %}
+    </title>
+    <style>
+        body {
+            background: rgb(191, 192, 252);
+            background-position: center;
+        }
+        nav{
+            background: rgb(138, 213, 226); 
+            padding: 10px; 
+            text-align: center; 
+            font-size:16px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <nav style="border: rgb(81, 154, 167); size: 0vmax;">
+        <a style="color:black;margin-right:20px; font-size: x-large;" href="{{url_for('home')}}">Home</a>
+        <a style="color:black;margin-right:20px; font-size: x-large;" href="{{url_for('history')}}">History</a>    
+    </nav>
+    </div>
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+</html> 
